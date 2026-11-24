@@ -22,4 +22,10 @@ darkBtn.addEventListener('click', function() {
     document.body.style.color = 'white';
   }
 });
+function updateClock() {
+  const now = new Date();
+  document.getElementById('clock').textContent = '現在時刻：' + now.toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
+updateClock();
 
