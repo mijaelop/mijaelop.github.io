@@ -7,94 +7,81 @@
     <title>アックスのポートフォリオ</title>
   </head>
   <body>
-    <p id="clock" style="font-weight: bold;"></p>
+    <header class="site-header">
+      <h1>アックスのポートフォリオ</h1>
+      <div class="header-tools">
+        <span id="clock"></span>
+        <button id="dark-btn" class="btn-sub">🌙 ダークモード切替</button>
+      </div>
+    </header>
 
-     <button id="dark-btn">ダークモード切替</button>
+    <main class="container">
+      <!-- プロフィール -->
+      <section class="card">
+        <div class="profile-box">
+          <img src="134260017986151617.jpg" alt="プロフィール画像" class="avatar">
+          <div>
+            <h2>About</h2>
+            <p>AION2をプレイするのが好きです。大学の授業をきっかけに、Webサイト制作（HTML / CSS / JavaScript）を学んでいます。</p>
+            <ul>
+              <li><strong>名前：</strong>アックス</li>
+              <li><strong>拠点：</strong>西の都</li>
+              <li><strong>趣味・関心：</strong>ゲーム（AION2）、動画制作、プログラミング</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <h1>アックス</h1>
-      <img src="134260017986151617.jpg">
-    <h2>About</h2>
-    <p>
-      AION2やるのが好きです<br>
-      
-    </p>
+      <!-- スキル -->
+      <section class="card">
+        <h2>Skills（学習中の技術）</h2>
+        <table>
+          <tr>
+            <th>Web制作</th>
+            <td>HTML5, CSS3, JavaScript</td>
+          </tr>
+          <tr>
+            <th>開発ツール</th>
+            <td>Git, GitHub, GitHub Pages</td>
+          </tr>
+          <tr>
+            <th>その他</th>
+            <td>動画編集、AIツールの活用</td>
+          </tr>
+        </table>
+      </section>
 
-    <h3>Profile</h3>
-    <ul>
-      <li>アックス</li>
-      <li>西の都</li>
-      <li>英語、</li>
-    </ul>
+      <!-- JavaScript作品：占い＆いいね -->
+      <section class="card center-box">
+        <h2>JavaScript ミニアプリ：今日の運勢占い</h2>
+        <p>ボタンを押すと今日のラッキー運勢がランダムで表示されます。</p>
+        <button id="uranai-btn" class="btn-main">占う</button>
+        <p id="uranai-result" class="result-text"></p>
+        
+        <hr class="divider">
+        <p>このページが気に入ったら押してください！</p>
+        <button id="like-btn" class="btn-like">👍 いいね！ <span id="like-count">0</span></button>
+      </section>
 
-    <h3>Skills</h3>
-    
-    <table>
-      <tr>
-        <th>OS</th>
-        <td>Windows, Ubuntu など</td>
-      </tr>
-      <tr>
-        <th>Engine, Frameworks</th>
-        <td>Node.js, Express など</td>
-      </tr>
-      <tr>
-        <th>Tool, MiddleWare</th>
-        <td>Git, PostgreSQL など</td>
-      </tr>
-      <tr>
-        <th>資格・免許</th>
-        <td>特になし</td>
-      </tr>
-    </table>
+      <!-- お気に入りコンテンツ -->
+      <section class="card">
+        <h2>Favorite & Works</h2>
+        <h3>好きな動画</h3>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 
-    <h3>Works</h3>
-    <p>WEBページを作り毎日更新できる</p>
-    <ul>
-      <li><a href="https://github.com/">GitHub</a></li>
-      <li><a href="https://qiita.com/">Qiita</a></li>
-      <li><a href="https://zenn.dev/">Zenn</a></li>
-      <li>
-        作った作品
-        <ul>
-          <li><a href="https://example.com/">AIを活用した動画</a></li>
-          <li><a href="https://example.com/">歌動画</a></li>
-        </ul>
-      </li>
-    </ul>
+        <h3>OpenProcessing 作品</h3>
+        <div class="video-wrapper">
+          <iframe src="https://openprocessing.org" width="640" height="360"></iframe>
+        </div>
+      </section>
+    </main>
 
-    <h3>Contact</h3>
-    <p>0120-1234-3133</p>
-    <ul>
-      <li><a href="mailto:name@example.com">Mail</a></li>
-      <li><a href="https://twitter.com/n_yobikou">X(旧 Twitter)</a></li>
-      <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-    </ul>
+    <footer class="site-footer">
+      <p>&copy; 2026 アックス Portfolio</p>
+    </footer>
 
-    <h3>History</h3>
-    <p>大学生　アルバイト経験なし</p>
-    <table>
-      <tr>
-        <th>2019 年</th>
-        <td><a href="https://dwango.co.jp/">株式会社○○</a> 入社</td>
-      </tr>
-      <tr>
-        <th>2018 年</th>
-        <td>学校法人○○○○学園<a href="https://nnn.ed.jp/">○○高等学校学校</a> 卒業</td>
-      </tr>
-      <tr>
-        <th>20XX 年</th>
-        <td>表彰、受賞歴、メディア掲載記事などあれば</td>
-      </tr>
-    </table>
-    <h3>好きな動画</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/oIXfZbKs7kM?si=STa6hgZzp_kVdcY6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <h3>Open Processing</h3>
-    <iframe src="https://openprocessing.org/sketch/822736/embed/" width="640" height="360"></iframe>
-     <section style="margin: 30px 0; padding: 20px; border: 2px solid #ccc; border-radius: 8px; text-align: center;">
-  <h3>今日の運勢占い</h3>
-  <button id="uranai-btn" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">占う</button>
-  <p id="uranai-result" style="font-size: 20px; font-weight: bold; margin-top: 15px; color: #d9534f;"></p>
-</section>
-<script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
