@@ -1,3 +1,4 @@
+// 1. 今日の運勢占い
 const btn = document.getElementById('uranai-btn');
 const result = document.getElementById('uranai-result');
 
@@ -12,20 +13,27 @@ btn.addEventListener('click', function() {
   const randomIndex = Math.floor(Math.random() * fortunes.length);
   result.textContent = fortunes[randomIndex];
 });
+
+// 2. ダークモード切替
 const darkBtn = document.getElementById('dark-btn');
 darkBtn.addEventListener('click', function() {
-  if (document.body.style.backgroundColor === 'black') {
-    document.body.style.backgroundColor = 'white';
-    document.body.style.color = 'black';
-  } else {
-    document.body.style.backgroundColor = 'black';
-    document.body.style.color = 'white';
-  }
+  document.body.classList.toggle('dark-mode');
 });
+
+// 3. いいね！カウント
+let count = 0;
+const likeBtn = document.getElementById('like-btn');
+const likeCount = document.getElementById('like-count');
+
+likeBtn.addEventListener('click', function() {
+  count++;
+  likeCount.textContent = count;
+});
+
+// 4. リアルタイム時計
 function updateClock() {
   const now = new Date();
-  document.getElementById('clock').textContent = '現在時刻：' + now.toLocaleTimeString();
+  document.getElementById('clock').textContent = now.toLocaleTimeString();
 }
 setInterval(updateClock, 1000);
 updateClock();
-
