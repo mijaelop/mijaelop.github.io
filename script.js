@@ -12,4 +12,14 @@ btn.addEventListener('click', function() {
   const randomIndex = Math.floor(Math.random() * fortunes.length);
   result.textContent = fortunes[randomIndex];
 });
+const darkBtn = document.getElementById('dark-btn');
+darkBtn.addEventListener('click', function() {
+  if (document.body.style.backgroundColor === 'black') {
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+  } else {
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+  }
+});
 
